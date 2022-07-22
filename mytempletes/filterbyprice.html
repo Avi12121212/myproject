@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>filterprice</title>
+</head>
+<body bgcolor="darkkhaki">
+
+<center>
+filter by price
+<form method="post">
+    {% csrf_token %}
+    <h1> input price range</h1>
+    <tr>
+        <td> From : <input type="number" , name="from" , value={{from}}>
+            <br>
+        <td> To : <input type="number" , name="to" , value={{to}}>
+            <br>
+        <td><input title="Press the search " type="submit">
+
+    </tr>
+
+    <table border="6">
+        <th>Book name</th>
+        <th>Book price</th>
+        {%for book in books%}
+        <tr>
+            <td>{{book.bookname}}</td>
+            <td>{{book.price}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</form>
+</center>>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weather report</title>
+
+</head>
+<center>
+
+    <body>
+<!--    {{jsondata}}-->
+        <div class="c1">
+            <form action="" method="get">
+
+                <h1>weather report</h1>
+                <l1>City :</l1>
+                <input type="text" name="city" value="{{city}}">
+                <input type="submit" name="option" value="submit"><br><br><br>
+                <l1>Tempreture :</l1>
+                <input type="text" name="tem" value="{{temp}} "><br><br>
+                <l1>Feels Like :</l1>
+                <input type="text" name="feel" value="{{feel}}"><br><br>
+                <l1>Country :</l1>
+                <input type="text" name="country" value="{{country}}"><br><br>
+                <l1>Weather :</l1>
+                <input type="text" name="weather" value="{{weather}}"><br><br>
+                <l2>Wind Speed :</l2>
+                <input type="text" name="wind" value="{{wind}}"><br><br>
+                <l>Time :</l>
+                <input type="number" name="time" value="{{time}}"><br><br>
+                <input type="submit" name="option" value="save">
+                <input type="hidden" name="diff" value="{{time_diff}}">
+            </form>
+        </div>
+    </body>
+</center>
+</html>

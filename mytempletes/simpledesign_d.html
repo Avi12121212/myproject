@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>design</title>
+    <style>
+         .column-row{
+            display: flex;
+            flex-direction: column;
+            background-color:red;
+            border-style: ridge;
+            margin: 20px;
+            padding: 20px;
+            border-radius:10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="column-row">
+    <!--{{datas}}-->
+    <table border="3">
+        <h1>Simple Design : Design</h1>
+        <tr style="background-color:blue; border-style:ridge;color:white;" >
+            <th>Task No</th>
+            <th>Task Name</th>
+            <th>Details</th>
+            <th>status</th>
+            <th>Action</th>
+        </tr>
+        {% for data in datas %}
+        <tr style="background-color:white; border-style:ridge;color:black;">
+            <td>{{data.task_number}}</td>
+            <td>{{data.task_name}}</td>
+            <td>{{data.detail}}</td>
+            <td>{{data.status}}</td>
+            <td><a target="new" href="http://127.0.0.1:8000/book/simpledesign?cmd=EDIT&task_number={{data.id}}" style="background-color:blue; border-style:ridge;color:white;">
+                EDIT
+            </a></td>
+            <td><a target="new" href="http://127.0.0.1:8000/book/simpledesign_d?cmd=DELETE&task_number={{data.id}}" style="background-color:blue; border-style:ridge; color:white;">
+                DELETE
+            </a>
+            </td>
+        </tr>
+        {%endfor%}
+
+    </table>
+</div>
+</body>
+</html>

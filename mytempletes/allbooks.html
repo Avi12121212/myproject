@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>allbooks</title>
+</head>
+<body>
+{{average}}
+<table border="2">
+
+    <th>Avg</th>
+    <th>Max</th>
+    <th>Min</th>
+    <tr>
+        <td>{{average.price__avg}}</td>
+        <td>{{average.price__max}}</td>
+        <td>{{average.price__min}}</td>
+    </tr>
+
+</table>
+
+
+<table border="6">
+    <th>bookname</th>
+    <th>subject</th>
+    <th>price</th>
+body of all books
+<!--{{books}}-->
+
+{% for book in books%}
+    <tr>
+    <td>{{book.bookname}}</td>
+    <td>{{book.subject}}</td>
+    <td>{{book.price}}</td>
+    </tr>
+{% endfor %}
+
+
+</table>
+</body>
+</html>

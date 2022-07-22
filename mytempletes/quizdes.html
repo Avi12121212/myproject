@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+    <style>
+.cardstyle
+{
+    background-color:teal;
+    background-color: brown;
+
+}
+    </style>
+</head>
+<body>
+<center>
+
+    <center>
+        {% for datax in alldata %}
+        <div class="row">
+            {% for data in datax%}
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+                <div class="card" style="background-color: pink">
+                    <div class="card-body">
+                        <h5 class="card-title">{{data.name}}</h5>
+                        <p class="card-text">{{data.description}}.</p>
+                        <a href="http://127.0.0.1:8000/book/htmlquestion/" class="btn btn-primary">Start quiz</a>
+                    </div>
+                    <div style="background-color: black">
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </center>
+
+
+</body>
+
+</html>
