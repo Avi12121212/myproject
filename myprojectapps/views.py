@@ -72,6 +72,8 @@ def header(request):
 def bookapp(request):
     return render(request, "bookapp.html")
 
+# ---------------------------quiz app and question model are used in below functions ---------
+
 
 def quiz(request):
     data = Quiz.objects.all()
@@ -174,6 +176,7 @@ def logout(request):
 def datastore(request):
     return render(request, "datastorehome.html")
 
+# --------------------------------------------------------------------------------------------------- save and delete data
 
 def simpledesign(request):
     data = []
